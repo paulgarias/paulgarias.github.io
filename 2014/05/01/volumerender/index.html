@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>HPC blog by paulgarias</title>
+    <title>Volume rendering w/ Paraview by paulgarias</title>
 
     <link rel="stylesheet" href="../../../../stylesheets/styles.css">
     <link rel="stylesheet" href="../../../../stylesheets/pygment_trac.css">
@@ -26,8 +26,8 @@
            <p><a href="/about.html">About</a></p>
       </header>
       <section>
-<!-- <div id="content" role="main" > -->
-      <div id="content" >
+ <div id="content" role="main" >
+ <!--     <div id="content" > -->
   <h2><a href="/2014/05/01/volumerender">Volume rendering of large scientific data sets</a></h2>
   <p> Advances in high performance computing platforms have allowed for an ever-increasing number of numerical simulations that investigate a multitude of problems in physics.  Direct numerical simulation (DNS) of turbulent flows requires resolutions that are fine enough to capture turbulent structures that dissipate the initial kinetic energy.  Therefore, the study and physical interpretation of the effects of fine scale persistent structure depends on having techniques to appropriately analyze and visualize large data sets.</p>
      <p> Visualization of the datasets can be used to provide insights into the dynamics of physical processes.  In the case of turbulent flows, the visualization of vorticity can be insightful in determining the extent of mixing. Volume rendering of vorticity are useful for the following reasons: </p>
@@ -36,6 +36,15 @@
     <li> Color maps provide information about low and high values of scalars simultaneously.</li>
     <li> The interplay of color and transparency provide a visual representation of the underlying dynamics in a beautiful and captivating manner.</li>
   </ul>
+     
+<h3>Managing data for visualization and scientific discovery:</h3>
+
+At the Computation Reacting Flows Laboratory at KAUST, a variety of software tools are utilized to study the underlying physics of combustion.  The primary tool for investigating detailed chemistry with DNS is called S3D, developed at Sandia National Labs, CA with a multi-institutional group of partners across the United States.  </p>
+
+<p>Due to the immense resolution requirements imposed by three-dimensional turbulence, it is critical to develop a workflow that takes advanced libraries, software, and hardware optimized for parallelism.  S3D uses HDF5 libraries to save check-pointed raw data for restarting, with the data saved to GPFS file systems for fast input/output (I/O).  Separate sets of files with processed data are saved in another directory, taking advantage of the compute notes at runtime.  This allows for faster turnaround in analysis, as the bandwidth or available compute nodes in data processing computer systems can be lower. Finally, visualization of the processed data is performed using Paraview, a parallel-capable visualization software package build on VTK and Python.</p>
+         
+          
+<p> [Content to be updated by night time 01 May 2014]</p>          
     </div>
       </section>
         
