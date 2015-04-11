@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>The elusive mixture fraction function... by paulgarias</title>
+
+    <link rel="stylesheet" href="../../../../stylesheets/styles.css">
+    <link rel="stylesheet" href="../../../../stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>PaulGArias</h1>
+        <p>Sharing my adventures in High Performance Computing (HPC) since 2014</p>
+
+
+        <!--<p class="view"><a href="https://github.com/paulgarias">View My GitHub Profile</a></p> -->
+          <p>  <iframe src="http://ghbtns.com/github-btn.html?user=paulgarias&type=follow"
+            allowtransparency="true" frameborder="0" scrolling="0" width="172px" height="28px"></iframe></p>
+           <p><a href="/">Home</a></p>
+           <p><a href="/about.html">About</a></p>
+      </header>
+      <section>
+ <div id="content" role="main" >
+ <!--     <div id="content" > -->
+  <h2><a href="./2015/04/11/mixturefraction">Computing mixture fraction in Cantera</a></h2>
+     
+<!-- <div style="width: 400px; height: 400px; overflow: hidden">
+  <img src="fig/h2airflame.png"  >
+</div> -->
+    
+  <p> I'd like to take a slightly more informaly tone with this article... 
+  </p>
+
+  <p> So, for those of you that are both students, post-docs, and researchers in combustion physics, I'm sure that it would be silly for me to review the definition/concept of mixture fraction. Acordingly, I'll dispense with the details... </p>
+
+  <p> If you use <a href="http://www.cantera.org">Cantera</a> for any of your combustion analysis needs, then you have, at some point, been looking around for a tool that will compute the mixture fraction. In my case, I could not actually find one online, so I built one myself! This utilizes the approach in <a href="http://www.amazon.com/Turbulent-Combustion-Cambridge-Monographs-Mechanics/dp/0521660823">Norbert Peters' Turbulent Combustion book</a>. </p>
+
+  <p> This little module I wrote can be accessed through GitHub, using the following command: </p>
+
+<div class="highlight">
+<pre>
+<code class="bash">
+<span class="c">$ git clone https://github.com/paulgarias/mixture_fraction.git </span>
+</code>
+</pre>
+</div>
+   
+  <p> The source file is also include here.</p> 
+
+  <script src="https://gist.github.com/paulgarias/4f56abfbcb98476b0a01.js"></script>
+
+  <p> Assuming that you installed Catera and can access the Cantera module in python, you should be able to simply import the class in the file in the following way </p>
+  
+<div class="highlight">
+    <pre>
+        <code class="bash">
+            <span class="c"> >>> import cantera as ct </span>
+            <span class="c"> >>> from mixture_fraction import mf </span>
+            <span class="c"> >>> gas = ct.Solution('gri30.xml', 'gri30_mix') </span> 
+            <span class="c"> >>> gas.X = "O2:0.21, N2:0.79" </span> 
+            <span class="c"> >>> Y_o = gas.Y # Need the mass fraction composition at oxidizer stream</span> 
+            <span class="c"> >>> gas.X = "CH4:1.0" </span> 
+            <span class="c"> >>> Y_f = gas.Y # Need the mass fraction composition at fuel stream</span> 
+            <span class="c"> >>> h = mf(gas,Y_o,Y_f) </span>
+        </code>
+    </pre>
+</div>
+
+    </div>
+      </section>
+        
+      <footer>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
