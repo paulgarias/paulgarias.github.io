@@ -60,14 +60,14 @@
 <div class="highlight">
     <pre>
         <code class="bash">
-            <span class="c"> >>> import cantera as ct </span>
-            <span class="c"> >>> from mixture_fraction import mf </span>
-            <span class="c"> >>> gas = ct.Solution('gri30.xml', 'gri30_mix') </span> 
-            <span class="c"> >>> gas.X = "O2:0.21, N2:0.79" </span> 
-            <span class="c"> >>> Y_o = gas.Y # Need the mass fraction composition at oxidizer stream</span> 
-            <span class="c"> >>> gas.X = "CH4:1.0" </span> 
-            <span class="c"> >>> Y_f = gas.Y # Need the mass fraction composition at fuel stream</span> 
-            <span class="c"> >>> h = mf(gas,Y_o,Y_f) </span>
+ <span class="c"> >>> import cantera as ct </span>
+ <span class="c"> >>> from mixture_fraction import mf </span>
+ <span class="c"> >>> gas = ct.Solution('gri30.xml', 'gri30_mix') </span> 
+ <span class="c"> >>> gas.X = "O2:0.21, N2:0.79" </span> 
+ <span class="c"> >>> Y_o = gas.Y # Need the mass fraction composition at oxidizer stream</span> 
+ <span class="c"> >>> gas.X = "CH4:1.0" </span> 
+ <span class="c"> >>> Y_f = gas.Y # Need the mass fraction composition at fuel stream</span> 
+ <span class="c"> >>> h = mf(gas,Y_o,Y_f) </span>
         </code>
     </pre>
 </div>
