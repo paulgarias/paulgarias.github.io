@@ -2,4 +2,4 @@ paulgarias.github.io
 ====================
 
 GitHub Page
-on thought regarding challenges in HPC, plus some neat solutions.
+on thoughts regarding challenges in data science and computing.
