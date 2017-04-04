@@ -209,6 +209,7 @@ footer {
   
   header {
     padding-right:320px;
+    margin-bottom:20px;
   }
   
   section {
@@ -235,7 +236,8 @@ footer {
   
   header {
     padding:0;
-    padding: 10px;
+    padding: 10px; 
+    margin-bottom:20px;
   }
   
   header ul, header p.view {
