@@ -25,7 +25,7 @@
 	var linklist = document.querySelectorAll("a");
 	for (var i=0;i<linklist.length; i++){
 		linklist[i].style.transition = "all 0.25s";
-		console.log(linklist[i].innerText=="");
+		//console.log(linklist[i].innerText=="");
 	}
 	
 })();
