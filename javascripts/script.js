@@ -1,6 +1,6 @@
 (function(){
 	menuLinks = [{"name":"Home","hyperlink":"http://paulgarias.github.io/index.html"},{"name":"About","hyperlink":"http://paulgarias.github.io/about.html"}];
-	imgsrc = "http://paulgarias.github.io/images/profile.jpg";
+	imgsrc = "http://paulgarias.github.io/images/PaulGArias.jpg";
 	var innerHTMLtext = "";
 	innerHTMLtext += '<img src=\"'+imgsrc+'\"';
 	innerHTMLtext += ' style=\"width:160px ; box-shadow: 0px 0px 5px #888888;\">';
