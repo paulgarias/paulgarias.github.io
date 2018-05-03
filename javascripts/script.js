@@ -6,7 +6,7 @@
 	innerHTMLtext += ' style=\"width:160px ; box-shadow: 0px 0px 5px #888888;\">';
 	innerHTMLtext += '  <h1 style=\"text-shadow: -1px 1px 5px #888888;\">PaulGArias</h1> <p>Sharing my adventures in computing and data science since 2014</p> <p> ';
 	innerHTMLtext += '<a href="http://github.com/paulgarias"><img class="socmed" src="http://paulgarias.github.io/images/socialmediaicons/github-9-xxl.png" /></a> ';
-	innerHTMLtext += '<a href="http://twitter.com/paulgarias"><img class="socmed" src="http://paulgarias.github.io/images/socialmediaicons/twitter-4-xxl.png" /></a> ';
+	innerHTMLtext += '<a href="http://twitter.com/ResoluteDataSci"><img class="socmed" src="http://paulgarias.github.io/images/socialmediaicons/twitter-4-xxl.png" /></a> ';
 	innerHTMLtext += '</p>';
 	for (var i=0; i < menuLinks.length ; i++) {
 		innerHTMLtext += '<p><a href=\"'+menuLinks[i]['hyperlink'] + '\">' + menuLinks[i]['name'] + '</a></p>';
